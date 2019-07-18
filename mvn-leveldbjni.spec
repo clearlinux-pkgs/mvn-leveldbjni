@@ -4,11 +4,12 @@
 #
 Name     : mvn-leveldbjni
 Version  : 1.8
-Release  : 1
+Release  : 2
 URL      : https://github.com/fusesource/leveldbjni/archive/leveldbjni-1.8.tar.gz
 Source0  : https://github.com/fusesource/leveldbjni/archive/leveldbjni-1.8.tar.gz
-Source1  : https://repo1.maven.org/maven2/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar
-Source2  : https://repo1.maven.org/maven2/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.pom
+Source1  : https://repo.maven.apache.org/maven2/org/fusesource/leveldbjni/leveldbjni-project/1.8/leveldbjni-project-1.8.pom
+Source2  : https://repo1.maven.org/maven2/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar
+Source3  : https://repo1.maven.org/maven2/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -35,11 +36,14 @@ data components for the mvn-leveldbjni package.
 %build
 
 %install
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-project/1.8
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-project/1.8/leveldbjni-project-1.8.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.pom
 
 
 %files
@@ -49,3 +53,4 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/fusesource/leveldbj
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar
 /usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.pom
+/usr/share/java/.m2/repository/org/fusesource/leveldbjni/leveldbjni-project/1.8/leveldbjni-project-1.8.pom
