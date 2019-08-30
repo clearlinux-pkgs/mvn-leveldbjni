@@ -4,7 +4,7 @@
 #
 Name     : mvn-leveldbjni
 Version  : 1.8
-Release  : 3
+Release  : 4
 URL      : https://github.com/fusesource/leveldbjni/archive/leveldbjni-1.8.tar.gz
 Source0  : https://github.com/fusesource/leveldbjni/archive/leveldbjni-1.8.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/fusesource/leveldbjni/leveldbjni-project/1.8/leveldbjni-project-1.8.pom
